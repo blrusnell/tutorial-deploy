@@ -1,6 +1,6 @@
 module.exports = {
     apps: [{
-      name: 'tutorial-2',
+      name: 'tutorial-deploy',
       script: './index.js'
     }],
     deploy: {
@@ -10,7 +10,7 @@ module.exports = {
         key: '~/.ssh/fec-reviews.pem',
         ref: 'origin/master',
         repo: 'git@github.com:blrusnell/tutorial-deploy.git',
-        path: '/home/ubuntu/tutorial-2',
+        path: '/home/ubuntu/tutorial-deploy',
         'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
       }
     }
